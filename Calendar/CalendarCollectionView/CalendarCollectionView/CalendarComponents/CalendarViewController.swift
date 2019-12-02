@@ -232,7 +232,7 @@ class CalendarViewController: UIViewController {
             }
             self.calendarDataSetup()
             if let monthUnwrapped = month{
-                self.calendarCollectionView.scrollToItem(at: IndexPath(row: 0, section: monthUnwrapped), at: .bottom, animated: false)
+                self.calendarCollectionView.scrollToItem(at: IndexPath(row: 0, section: monthUnwrapped), at: .top, animated: false)
             }
         }
         yearCollectionView.view.frame = CGRect(x: 0, y: 10, width: self.view.frame.width, height: yearViewHeight)

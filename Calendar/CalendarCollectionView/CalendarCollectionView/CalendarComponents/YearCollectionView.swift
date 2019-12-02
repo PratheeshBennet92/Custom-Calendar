@@ -96,7 +96,7 @@ class YearCollectionView: UICollectionViewController {
         cell.lblYear.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         if indexPath == index,isFirstLoad{
             cell.lblYear.transform = CGAffineTransform(scaleX: 2.0, y: 2.0)
-            passYearClosure!(arrYears[indexPath.row], currentMonth)
+            passYearClosure?(arrYears[indexPath.row], currentMonth - 1)
             isFirstLoad = false
         }
         return cell
