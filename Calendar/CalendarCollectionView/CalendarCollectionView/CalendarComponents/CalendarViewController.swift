@@ -113,6 +113,8 @@ extension CalendarViewController:UICollectionViewDataSource{
             let dates = (cell.lblTest.text ?? "") + " " + Months.getMonths()[indexPath.section].rawValue + " " + "\(String(describing: selectedYear))"
             if arrSelectedDates.contains(dates){
                 arrSelectedDates.append(dates)
+                cell.lblTest.layer.cornerRadius = cell.lblTest.frame.width/2
+                cell.lblTest.layer.masksToBounds = true
                 cell.lblTest.backgroundColor = .lightGray
             }else{
                 arrSelectedDates = arrSelectedDates.filter({ (each) -> Bool in
