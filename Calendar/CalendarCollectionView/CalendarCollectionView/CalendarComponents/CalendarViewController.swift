@@ -57,6 +57,8 @@ extension CalendarViewController: UICollectionViewDelegate{
             let date = (cell.lblTest.text ?? "") + " " + Months.getMonths()[indexPath.section].rawValue + " " + "\(String(describing: selectedYear))"
             if !arrSelectedDates.contains(date){
                 arrSelectedDates.append(date)
+                cell.lblTest.layer.cornerRadius = cell.lblTest.frame.width/2
+                cell.lblTest.layer.masksToBounds = true
                 cell.lblTest.backgroundColor = .lightGray
             }else{
                 arrSelectedDates = arrSelectedDates.filter({ (each) -> Bool in
