@@ -59,6 +59,10 @@ extension CalendarViewController: UICollectionViewDelegate{
                 arrSelectedDates.append(date)
                 cell.lblTest.layer.cornerRadius = cell.lblTest.frame.width/2
                 cell.lblTest.layer.masksToBounds = true
+                /*Left arc*/
+                //cell.lblTest.layer.maskedCorners = [ .layerMinXMinYCorner, .layerMinXMaxYCorner]
+                /*Right arc*/
+                //cell.lblTest.layer.maskedCorners = [ .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
                 cell.lblTest.backgroundColor = .lightGray
             }else{
                 arrSelectedDates = arrSelectedDates.filter({ (each) -> Bool in
